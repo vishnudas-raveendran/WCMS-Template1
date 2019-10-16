@@ -1,0 +1,160 @@
+-- phpMyAdmin SQL Dump
+-- version 4.0.9
+-- http://www.phpmyadmin.net
+--
+-- Host: 127.0.0.1
+-- Generation Time: Sep 15, 2015 at 06:30 PM
+-- Server version: 5.5.34
+-- PHP Version: 5.4.22
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Database: `ce`
+--
+CREATE DATABASE IF NOT EXISTS `ce` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+USE `ce`;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `achievements`
+--
+
+CREATE TABLE IF NOT EXISTS `achievements` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `caption` varchar(2000) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `img_ref` varchar(200) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `link` varchar(300) COLLATE utf8_unicode_ci DEFAULT '#',
+  `updated` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=23 ;
+
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `events`
+--
+
+CREATE TABLE IF NOT EXISTS `events` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `caption` varchar(2000) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `img_ref` varchar(200) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `link` varchar(300) COLLATE utf8_unicode_ci DEFAULT '#',
+  `updated` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=26 ;
+
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `faculty`
+--
+
+CREATE TABLE IF NOT EXISTS `faculty` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
+  `experience` int(11) DEFAULT NULL,
+  `designation` varchar(100) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'Assistant Professor',
+  `qualifications` varchar(30) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `aos` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `phone` bigint(20) DEFAULT NULL,
+  `email` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `img_ref` varchar(50) COLLATE utf8_unicode_ci DEFAULT '8fbe9627cbfa2e1dadba06c8ee71a5bd',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=48 ;
+
+
+
+--
+-- Table structure for table `gallery`
+--
+
+CREATE TABLE IF NOT EXISTS `gallery` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
+  `title` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `caption` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+  `img_ref` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `link` varchar(300) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `updated` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=88 ;
+
+--
+-- Table structure for table `news`
+--
+
+CREATE TABLE IF NOT EXISTS `news` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `caption` varchar(2000) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `img_ref` varchar(200) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `link` varchar(300) COLLATE utf8_unicode_ci DEFAULT '#',
+  `updated` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=19 ;
+
+
+
+
+--
+-- Table structure for table `notifications`
+--
+
+CREATE TABLE IF NOT EXISTS `notifications` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `content` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
+  `link` varchar(150) COLLATE utf8_unicode_ci DEFAULT '#',
+  `updated` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=6 ;
+
+
+
+--
+-- Table structure for table `papers`
+--
+
+CREATE TABLE IF NOT EXISTS `papers` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(1000) COLLATE utf8_unicode_ci NOT NULL,
+  `author` varchar(1000) COLLATE utf8_unicode_ci NOT NULL,
+  `publisher` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
+  `date` varchar(500) COLLATE utf8_unicode_ci NOT NULL COMMENT 'date of publication',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=11 ;
+
+
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
+  `password` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `last_logged` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `username` (`username`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=10 ;
+
+
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

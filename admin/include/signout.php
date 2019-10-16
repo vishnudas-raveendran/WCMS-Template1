@@ -1,0 +1,11 @@
+<?php
+session_start();
+$_SESSION=array();
+$_POST=array();
+$_FILES=array();
+unset($_SESSION['loggedin']);
+unset($_SESSION['logstatus']);
+//print_r($_SESSION);
+unset($_POST);
+header('Location:../index.php');
+?>
