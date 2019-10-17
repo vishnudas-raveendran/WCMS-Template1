@@ -12,7 +12,7 @@ header('Location:../index.php');
 error_reporting(0);
 ?>
 <head>
-	 <title>Admin+ | Dept. of CE</title>
+	 <title>Admin+ | Website Title</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta name="description" content="" />
@@ -59,9 +59,9 @@ error_reporting(0);
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <strong>Sahrdaya College of Engineering and Technology</strong>
+                    <strong>Website Name Goes Here</strong>
                     &nbsp;&nbsp;
-                    <strong>Support: </strong>vishnudas.raveendran@gmail.com
+                    <strong>Support: </strong>Developer Name
                 </div>
 
             </div>
@@ -85,7 +85,7 @@ error_reporting(0);
             <div class="left-div">
                 <div class="user-settings-wrapper">
                     <ul class="nav">
-						<h1>Department of Civil Engineering</h1>
+						<h1>Website Title</h1>
                      </ul>
                 </div>
             </div>

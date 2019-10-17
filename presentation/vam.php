@@ -10,26 +10,25 @@ require_once('../include/header.php');
 <div class="about-section">
 				<div class="container">
 						<div class="about-grid">
-						<h3 align="center" style="color:#747474"> VISION AND MISSION </h3></br></br>
+						<h3 align="center" style="color:#747474"> LOREM IPSUM </h3></br></br>
 							<div class="col-md-4 about-grid">
-								<h3>Vision</h3>
+								<h3>Lorem Ipsum</h3>
 								
 								<div class="justify about1">
-								To train the youth to be the leaders of tomorrow with <strong>apt skills, deep rooted sense of social responsibility, strong ethical values and with a global outlook</strong> to face the challenges of changing world.
-							    </div>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+								</div>
 								
 							</div>
 							<div class="col-md-4 about-grid">
-							<h3>Mission</h3>
+							<h3> fugiat nulla</h3>
 								<div class="justify">
-									With a high calibre faculty and an excellent infrastructure, we promote <strong>academic excellence, absolute discipline and sound practical exposure </strong>
+								Duis aute irure dolor in reprehenderit in voluptate velit esse <strong>cillum dolore</strong> eu fugiat nulla pariatur.
 								</div>
 							</div>
 							<div class="col-md-4 about-grid">
-							<h3>Quality Policy</h3>
+							<h3> Finibus Bonorum </h3>
 								<div class="justify">
-									We at Sahrdaya are committed to provide <strong>Quality Technical Education </strong>through continual improvement and by inculcating Moral & Ethical values to mould into Vibrant Engineers with high Professional Standards.
-We impart the best education through the support of <strong>competent & dedicated faculties, excellent infrastructure and colloboration with industries</strong> to create <strong>ambience of excellence</strong>
+								Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam
 								</div>
 								
 							</div>

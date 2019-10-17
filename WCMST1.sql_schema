@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 --
 -- Database: `ce`
 --
-CREATE DATABASE IF NOT EXISTS `ce` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+CREATE DATABASE IF NOT EXISTS `WCMST1` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 USE `ce`;
 
 -- --------------------------------------------------------

@@ -15,7 +15,7 @@ header('Location:../index.php');
 <html lang="en" class="no-js">
 	<head>
 		<!--favicons -->
-	<title>Admin+ | Dept. of CE</title>
+	<title>Admin+ | Website title</title>
 	<link rel="apple-touch-icon" sizes="57x57" href="../favicon/apple-icon-57x57.png">
 	<link rel="apple-touch-icon" sizes="60x60" href="../favicon/apple-icon-60x60.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="../favicon/apple-icon-72x72.png">
@@ -41,7 +41,7 @@ header('Location:../index.php');
 	<body>
 		<div class="container">	
 			<header>
-				<h1>Department of Civil Engineering<span>Admin Panel</span></h1>	
+				<h1>Website Title<span>Admin Panel</span></h1>	
 			</header>
 			<div class="main clearfix">
 				<nav id="menu" class="nav">					

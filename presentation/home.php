@@ -48,7 +48,7 @@ $page="home";
 		<div class="content">
 		<div class="welcome">
 			<div class="container">
-				<h3>welcome to Dept. of Civil Engineering</h3>
+				<h3>Welcome to Lorem Ipsum</h3>
 				
 			</div>
 		</div>

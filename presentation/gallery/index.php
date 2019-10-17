@@ -11,7 +11,7 @@ thanks to:
 -->
 <html>
 	<head>
-		<title>Dept. of CE|Sahrdaya College of Engineering and Technology</title>
+		<title>Website Title here</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -28,7 +28,7 @@ thanks to:
 				<!-- Header -->
 					<header id="header">
 						<h1>Gallery</h1>
-						<p><a href="../home.php">Back <- Department of Civil Engineering</a></p>
+						<p><a href="../home.php">Home</a></p>
 						<!--<ul class="icons">
 							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
 							<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
@@ -61,11 +61,11 @@ try{
 					</section>
 
 				<!-- Footer -->
-					<footer id="footer">
+					<!-- <footer id="footer">
 						<ul class="copyright">
-							&copy; Dept. of CE | <a href="mailto:ce.sahrdaya@gmail.com">ce.sahrdaya@gmail.com</a>
+							MIT License
 						</ul>
-					</footer>
+					</footer> -->
 
 			</div>
 

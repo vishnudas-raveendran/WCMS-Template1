@@ -17,8 +17,8 @@ Install and configure above pre-requisites before proceeding with installation.
 ## Installation
 - Download the zipped folder of this repository to your machine.
 - Extract the contents to your web root directory. Refer the manual of the web server you used to know which is the web root directory. If you have used Apache HTTP server refer to [this guide](https://httpd.apache.org/docs/trunk/getting-started.html "HTTP  Server Getting Started") for details.
-- Run you SQL console and import the schema to your DB from ce.sql_Schema file.
-- Remove the ce.sql_Schema file from the web root directory or copy it to some other directory outside your server or on external offline disk (because it is very very risky to store your DB schema or any other sensitive file in web root directory of your server. Read directory traversal attack)
+- Run you SQL console and import the schema to your DB from WCMST1.sql_schema file.
+- Remove the WCMST1.sql_schema file from the web root directory or copy it to some other directory outside your server or on external offline disk (because it is very very risky to store your DB schema or any other sensitive file in web root directory of your server. Read directory traversal attack)
 
 ## Running the site
 - If you have used XAMPP control panel start the service of your server, SQL DB and PHP.

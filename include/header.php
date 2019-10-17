@@ -20,17 +20,18 @@ try{
 		<!-- Search engine meta-tags -->
 		
 		
-		<meta name="description" content="This is the official website of the Civil engineering department of Sahrdaya College of Engineering and Technology." />
+		<meta name="description" content="Enter a description of the website here for search engines" />
 		
-		<meta name="author" content="Dept. of CE">
+		<meta name="author" content="Author Name">
 		<meta name="robots" content="index, follow">
 		<meta name="revisit-after" content="14 days">
-<title>Dept. of CE | Sahrdaya College of Engineering and Technology</title>
+		<!-- Search engine meta tags ends -->
+<title>Enter website title here</title>
 <link href="../assets/css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
 <link href="../assets/css/style.css" rel="stylesheet" type="text/css" media="all" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Civil Engineering department, Sahrdaya College of Engineering and Technology" />
+<meta name="keywords" content="Enter keywords related to your website" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <script src="../assets/js/jquery-1.8.3.min.js"></script>
 <!---- start-smoth-scrolling---->
@@ -71,23 +72,16 @@ try{
 				<div class="container">
 					<div class="header-top">
 						<div class="logo">
-							<a href="index.html">Department of <span>Civil Engineering</span></a>
+							<a href="index.html">WEBSITE <span>TITLE</span></a>
 							
-						</div>
-						<div class="small-logo">
-						<a href="http://www.sahrdaya.ac.in">Sahrdaya College of Engineering and Technology</a>
 						</div>
 						<div class="top-menu">
 							<span class="menu"><img src="../images/nav.png" alt="menu"/> </span>
 							<ul>
 								<li><a href="../index.php" <?php if($page=="home"){echo "class=\"active\"";}?>>home</a></li>
-								<li><a href="vam.php" <?php if($page=="vam"){echo "class=\"active\"";}?>>Vision and Mission</a></li>
-								
-								<li><a href="academics.php" <?php if($page=="acad"){echo "class=\"active\"";}?>>Academics</a></li>
-								
+								<li><a href="vam.php" <?php if($page=="vam"){echo "class=\"active\"";}?>>Static Page</a></li>
 								<li><a href="publications.php" <?php if($page=="papers"){echo "class=\"active\"";}?>>Publications</a></li>
 								<li><a href="achievements.php" <?php if($page=="ach"){echo "class=\"active\"";}?>>Achievements</a></li>
-								<li><a href="facilities.php" <?php if($page=="fac"){echo "class=\"active\"";}?>>facilities</a></li>
 								<li><a href="staff.php" <?php if($page=="staff"){echo "class=\"active\"";}?>>Staff Profile</a></li>
 								<li><a href="gallery/" <?php if($page=="gallery"){echo "class=\"active\"";}?>>Gallery</a></li>
 								<li><a href="news.php" <?php if($page=="news"){echo "class=\"active\"";}?>>News</a></li>

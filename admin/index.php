@@ -68,9 +68,9 @@ try{
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <strong>Sahrdaya College of Engineering and Technology</strong>
+                    <strong>Website Title</strong>
                     &nbsp;&nbsp;
-                    <strong>Support: </strong>vishnudas.raveendran@gmail.com
+                    <strong>Support: </strong>Developer Email
                 </div>
 
             </div>
@@ -95,7 +95,7 @@ try{
             <div class="left-div">
 				<div class="user-settings-wrapper">
                     <ul class="nav">
-						<h1>Department of Civil Engineering</h1>
+						<h1>Website Title</h1>
 					</ul>
                 </div>
                 
@@ -149,7 +149,7 @@ MARK;
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    &copy; 2015 Dept of Civil Engineering | Developed by Vishnudas Raveendran (2012 Batch)</a>
+                    &copy; Website Title | MIT License</a>
                 </div>
 
             </div>
