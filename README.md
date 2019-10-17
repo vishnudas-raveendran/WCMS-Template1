@@ -1,5 +1,9 @@
 # Web Content Management System - Template1
-This project is a web content management system designed for my college back in 2015. The system contains a admin page which can be used to modify the contents of the web page of a fixed template
+This project is a web content management system designed for my college back in 2015. The system contains an admin page which can be used to modify the contents of the web page of a fixed template
+
+## How is this project useful to you?
+If you do not want to use wordpress for some reason and want to have a website with an admin page to modify the content, this project might help.
+If you want to just tinker around and explore web programming, you can consider using this project to understand the concepts behind web uploads, page rendering, using an admin page to manage content.
 
 ## Pre-Requisites for Installation
 - A web server such as Apache HTTP Server (https://httpd.apache.org/)
@@ -12,7 +16,7 @@ Install and configure above pre-requisites before proceeding with installation.
 
 ## Installation
 - Download the zipped folder of this repository to your machine.
-- Extract the contents to your web root directory. Refer the manual of the web server you used to know which is the web root directory. If you have used Apache HTTP server refer https://httpd.apache.org/docs/trunk/getting-started.html for details.
+- Extract the contents to your web root directory. Refer the manual of the web server you used to know which is the web root directory. If you have used Apache HTTP server refer to [this guide](https://httpd.apache.org/docs/trunk/getting-started.html "HTTP  Server Getting Started") for details.
 - Run you SQL console and import the schema to your DB from ce.sql_Schema file.
 - Remove the ce.sql_Schema file from the web root directory or copy it to some other directory outside your server or on external offline disk (because it is very very risky to store your DB schema or any other sensitive file in web root directory of your server. Read directory traversal attack)
 
