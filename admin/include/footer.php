@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    &copy; 2015 Dept of General Science | Developed by Vishnudas Raveendran (2012 Batch)</a>
+                    &copy; Website Title | MIT License</a>
                 </div>
 
             </div>
