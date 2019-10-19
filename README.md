@@ -18,7 +18,7 @@ Install and configure above pre-requisites before proceeding with installation.
 - Download the zipped folder of this repository to your machine.
 - Extract the contents to your web root directory. Refer the manual of the web server you used to know which is the web root directory. If you have used Apache HTTP server refer to [this guide](https://httpd.apache.org/docs/trunk/getting-started.html "HTTP  Server Getting Started") for details.
 - Run you SQL console and import the schema to your DB from WCMST1.sql_schema file.
-- You may have to change the contents of /include/db.info.php and at /admin/include/db.info.php with the databasename, username and password of your database. (Default username is 'root' and password is empty)
+- You may have to change the contents of /include/db.info.php and at /admin/include/db.info.php with the databasename, username and password of your database. (Default username is 'wcms-root' and password is 'wcms-root-password')
 - Remove the WCMST1.sql_schema file from the web root directory or copy it to some other directory outside your server or on external offline disk (because it is very very risky to store your DB schema or any other sensitive file in web root directory of your server. Read directory traversal attack)
 
 ## Running the site
