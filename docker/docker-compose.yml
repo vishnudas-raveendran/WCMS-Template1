@@ -15,7 +15,7 @@ services:
       - mysql
     volumes:
       - ../www:/var/www/html
-      - ./logs/mysql:/var/log/apache2
+      - ./logs/apache2:/var/log/apache2
       # - ${PHP_INI-./config/php/php.ini}:/usr/local/etc/php/php.ini
       # - ${VHOSTS_DIR-./config/vhosts}:/etc/apache2/sites-enabled
     depends_on:
@@ -24,15 +24,16 @@ services:
   mysql:
     image: mysql
     container_name: 'wcms-mysql'
+    command: --default-authentication-plugin=mysql_native_password
     restart: 'always'
     volumes:
       - ./container-data/mysql:/var/lib/mysql
-      - ./logs/apache2:/var/log/mysql
+      - ./logs/mysql:/var/log/mysql
     environment:
       MYSQL_DATABASE: wcms
       MYSQL_ROOT_PASSWORD: wcms-root-password
       MYSQL_USER : wcms-user
-      MYSQL_PASSWORD: wcms-password
+      MYSQL_PASSWORD: wcms-user-password
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:latest
