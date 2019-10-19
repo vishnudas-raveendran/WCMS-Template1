@@ -46,8 +46,7 @@ $data = $stmt->fetchAll();
 															</thead>
 															<tbody>
 																<?php
-																	
-																	while($e=$stmt->fetch()){
+																	foreach($data as $e){
 																
 																?>
 																<form action="papers.php" method="post">

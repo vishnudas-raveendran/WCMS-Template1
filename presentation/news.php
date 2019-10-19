@@ -30,7 +30,7 @@ $data = $stmt -> fetchAll();
 											
 										
 									<?php
-									while($e=$stmt->fetch()){
+									foreach($data as $e){
 										
 									?>
 

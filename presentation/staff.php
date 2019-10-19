@@ -25,7 +25,7 @@ $data = $stmt->fetchAll();
 	   <div class="container">
 	   	 <div class="faculty_top">
 		 <?php
-			while($data && $e=$stmt->fetch())
+			foreach($data as $e)
 				{ 
 				$i=1;
 		 ?>
