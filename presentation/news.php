@@ -4,6 +4,7 @@ require_once('../include/header.php');
 $sql="SELECT `title`,`caption`,`link`,`img_ref` FROM news";
 $stmt=$db->prepare($sql);
 $stmt->execute();
+$data = $stmt -> fetchAll();
 ?>
 
 
@@ -13,8 +14,14 @@ $stmt->execute();
 				<div class="container">
 						<div class="about-grid">
 						<h3 align="center" style="color:#747474"> News </h3></br></br>
-							
-							<!-- content for achievements -->
+							<div align="center" style="color:grey">
+							<?php 
+							if(!$data){
+								echo "Would be updated shortly...";
+							}
+							?>
+							</div>
+							<!-- content for News -->
 							
 							<div class="featured">
 								<div class="container">
