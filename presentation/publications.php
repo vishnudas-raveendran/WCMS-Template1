@@ -4,7 +4,14 @@ require_once('../include/header.php');
 require_once('../include/db.info.php');
 try{
     $db=new PDO(DbInfo,DbUser,DbPwd);
-     }catch(PDOException $e){ echo 'Connection failed:',$e->getMessage(); exit;}
+	 }catch(PDOException $e){ echo 'Connection failed:',$e->getMessage(); exit;}
+	 
+$sql="Select * FROM `papers`";
+$stmt=$db->prepare($sql);
+$stmt->execute();
+$i=1;
+$data = $stmt->fetchAll();
+
 ?>
 
 
@@ -14,6 +21,13 @@ try{
 				<div class="container">
 						<div class="about-grid">
 							<h3 align="center" style="color:#747474">Publications </h3></br></br>
+								<div align="center" style="color:grey">
+								 <?php
+									if(! $data){
+										echo "Would be updated shortly...";
+									}else{
+								 ?>
+								 </div>
 								<div class="panel panel-default">
 												<div class="panel-heading" align="center">
 												 View Publications
@@ -32,11 +46,7 @@ try{
 															</thead>
 															<tbody>
 																<?php
-																	$sql="Select * FROM `papers`";
-																	$stmt=$db->prepare($sql);
-																	$stmt->execute();
-																	$i=1;
-																	while($e=$stmt->fetch()){
+																	foreach($data as $e){
 																
 																?>
 																<form action="papers.php" method="post">
@@ -58,7 +68,7 @@ try{
 													</div>
 												</div>
 								</div>
-								
+								<?php } //else closed?>
 						</div>
 						<div class="clearfix"></div>
 					</div>

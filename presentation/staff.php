@@ -4,12 +4,20 @@ require_once('../include/header.php');
 $sql="SELECT * FROM faculty ORDER BY experience DESC";
 $stmt=$db->prepare($sql);
 $stmt->execute();
+$data = $stmt->fetchAll();
 ?>
 <div class="about-section">
 				<div class="container">
 						<div class="about-grid">
 						<h3 align="center" style="color:#747474"> Staff Profile </h3></br></br>
+						</div>
 				</div>
+				<div align="center" style="color:grey">
+							<?php 
+							if(!$data){
+								echo "Would be updated shortly...";
+							}
+							?>
 				</div>
 			</div>
 
@@ -17,7 +25,7 @@ $stmt->execute();
 	   <div class="container">
 	   	 <div class="faculty_top">
 		 <?php
-			while($e=$stmt->fetch())
+			foreach($data as $e)
 				{ 
 				$i=1;
 		 ?>

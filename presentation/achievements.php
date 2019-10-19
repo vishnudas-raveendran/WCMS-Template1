@@ -4,6 +4,7 @@ require_once('../include/header.php');
 $sql="SELECT `title`,`caption`,`link`,`img_ref` FROM achievements";
 $stmt=$db->prepare($sql);
 $stmt->execute();
+$data = $stmt->fetchAll();
 ?>
 
 
@@ -15,7 +16,13 @@ $stmt->execute();
 						<h3 align="center" style="color:#747474"> Achievements </h3></br></br>
 							
 							<!-- content for achievements -->
-							
+							<div align="center" style="color:grey">
+							<?php 
+							if(!$data){
+								echo "Would be updated shortly...";
+							}
+							?>
+							</div>
 							<div class="featured">
 								<div class="container">
 									
@@ -23,8 +30,7 @@ $stmt->execute();
 											
 										
 									<?php
-									while($e=$stmt->fetch()){
-										
+									foreach($data as $e){
 									?>
 
 										<div class="col-md-3 featured-grid">
