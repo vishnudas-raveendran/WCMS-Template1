@@ -1,0 +1,49 @@
+version: '3'
+
+services:
+  webserver:
+    build:
+      context: .
+      dockerfile: dockerfile-php
+    container_name: 'wcms-webserver'
+    restart: 'always'
+    # Mapping changed to 90 and 543 avoid conflicts with local apache
+    ports:
+      - '90:80'
+      - '543:443'
+    links:
+      - mysql
+    volumes:
+      - ../www:/var/www/html
+      - ./logs/apache2:/var/log/apache2
+      # - ${PHP_INI-./config/php/php.ini}:/usr/local/etc/php/php.ini
+      # - ${VHOSTS_DIR-./config/vhosts}:/etc/apache2/sites-enabled
+    depends_on:
+      - 'mysql'
+
+  mysql:
+    image: mysql
+    container_name: 'wcms-mysql'
+    command: --default-authentication-plugin=mysql_native_password
+    restart: 'always'
+    volumes:
+      - ./container-data/mysql:/var/lib/mysql
+      - ./logs/mysql:/var/log/mysql
+    environment:
+      MYSQL_DATABASE: wcms
+      MYSQL_ROOT_PASSWORD: wcms-root-password
+      MYSQL_USER : wcms-user
+      MYSQL_PASSWORD: wcms-user-password
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    container_name: 'wcms-phpmyadmin'
+    environment:
+      PMA_HOST: mysql
+      PMA_PORT: 3306
+    ports:
+      - '8081:80'
+    volumes:
+      - /sessions
+    depends_on:
+      - 'mysql'

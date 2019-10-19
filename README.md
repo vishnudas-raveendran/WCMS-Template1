@@ -12,22 +12,38 @@ This project is a web content management system designed for my college back in 
 
 Alternatively (recommended and easy way), install XAMPP (https://www.apachefriends.org/index.html).
 
+### Docker setup pre-requisites (optional)
+Setup the following for running the application using docker.
+- [Docker Engine](https://docs.docker.com/install/)
+- [Docker Compose](https://docs.docker.com/compose/install/)
+
 Install and configure above pre-requisites before proceeding with installation.
 
-## Installation
-- Download the zipped folder of this repository to your machine.
+# Setup & Installation
+## Default setup
+- Copy the `www` folder of this repository to your machine.
 - Extract the contents to your web root directory. Refer the manual of the web server you used to know which is the web root directory. If you have used Apache HTTP server refer to [this guide](https://httpd.apache.org/docs/trunk/getting-started.html "HTTP  Server Getting Started") for details.
 - Run you SQL console and import the schema to your DB from WCMST1.sql_schema file.
-- You may have to change the contents of /include/db.info.php and at /admin/include/db.info.php with the databasename, username and password of your database. (Default username is 'root' and password is empty)
+- You may have to change the contents of `/include/db.info.php` and at `/admin/include/db.info.php` with the mysql:host, database name, username and password of your database. The existing values are
+```
+    mysql:host    - 'mysql'
+    database name - 'wcms' 
+    username      - 'wcms-user'
+    password      - 'wcms-user-password'
+```
+- ***Note***  *:  `mysql:host` should be `localhost` for most non-Docker based setups*. 
 - Remove the WCMST1.sql_schema file from the web root directory or copy it to some other directory outside your server or on external offline disk (because it is very very risky to store your DB schema or any other sensitive file in web root directory of your server. Read directory traversal attack)
 
-## Running the site
+### Running the site
 - If you have used XAMPP control panel start the service of your server, SQL DB.
 - Navigate to localhost/<folder name of extracted files> (or 127.0.0.1/<folder name of extracted files>) on your browser. You should land on the homepage of the site.
 - To access the admin site, navigate to 127.0.0.1/<folder name of extracted files>/admin.
 
+## Docker setup (optional)
+Run the executable script file `run-docker.sh` in the repo home with any of the arguments :` start | stop | restart`. For example, the following starts the docker containers and runs the applications. 
 
+```
+./run-docker.sh start
+```
 
-
-
-
+Note: You can also stop the containers/exit from the terminal window by pressing <kbd>CTRL</kbd> + <kbd>C</kbd>
