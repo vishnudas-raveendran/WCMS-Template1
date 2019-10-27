@@ -23,6 +23,12 @@ Install and configure above pre-requisites before proceeding with installation.
 ## Default setup
 - Copy the `www` folder of this repository to your machine.
 - Extract the contents to your web root directory. Refer the manual of the web server you used to know which is the web root directory. If you have used Apache HTTP server refer to [this guide](https://httpd.apache.org/docs/trunk/getting-started.html "HTTP  Server Getting Started") for details.
+- Provide permission for file write (so that admin can upload images). Be careful to not give more permission than required, [refer this thread](https://stackoverflow.com/a/55084883/5107305 "Stack overflow: Error in file upload due to insufficient privileges") for more information.
+    - Find Web Server user
+        `ps aux | grep httpd`
+    - In this case, its daemon Replace it with yours in next command.
+        `sudo chown -R daemon /opt/lampp/htdocs/[Working Project]/`
+        
 - Run you SQL console and import the schema to your DB from WCMST1.sql_schema file.
 - You may have to change the contents of `/include/db.info.php` and at `/admin/include/db.info.php` with the mysql:host, database name, username and password of your database. The existing values are
 ```
