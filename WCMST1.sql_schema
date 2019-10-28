@@ -19,8 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `ce`
 --
-CREATE DATABASE IF NOT EXISTS `WCMST1` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
-USE `ce`;
+CREATE DATABASE IF NOT EXISTS `wcms` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+USE `wcms`;
 
 -- --------------------------------------------------------
 
@@ -153,8 +153,15 @@ CREATE TABLE IF NOT EXISTS `users` (
   UNIQUE KEY `username` (`username`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=10 ;
 
+--
+-- Insert username- 'admin' and MD5 has of the password 'admin-password'
+--
+INSERT INTO `users`(`username`, `password`) VALUES ('admin','4b99e4ad8eabc68770e4c2bdf32298d8');
 
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+
+-- DROP TABLESPACE `achievements`,`events`,`faculty`,`gallery`,`news`,`notifications`,`papers`,`users`;

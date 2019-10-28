@@ -29,7 +29,7 @@ Install and configure above pre-requisites before proceeding with installation.
     - In this case, its daemon Replace it with yours in next command.
         `sudo chown -R daemon /opt/lampp/htdocs/[Working Project]/`
         
-- Run you SQL console and import the schema to your DB from WCMST1.sql_schema file.
+- Run you SQL console and import the schema to your DB from WCMST1.sql_schema file. The default username/password for the admin panel is 'admin' / 'admin-password'.
 - You may have to change the contents of `/include/db.info.php` and at `/admin/include/db.info.php` with the mysql:host, database name, username and password of your database. The existing values are
 ```
     mysql:host    - 'mysql'
