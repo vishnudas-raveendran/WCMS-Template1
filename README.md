@@ -52,4 +52,6 @@ Run the executable script file `run-docker.sh` in the repo home with any of the 
 ./run-docker.sh start
 ```
 
+The application starts at `90` and phpmyadmin at `8081` instead of the usual ports, to avoid chances of possible conflicts with any local services. 
+
 Note: You can also stop the containers/exit from the terminal window by pressing <kbd>CTRL</kbd> + <kbd>C</kbd>
