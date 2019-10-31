@@ -43,7 +43,7 @@ Install and configure above pre-requisites before proceeding with installation.
 ### Running the site
 - If you have used XAMPP control panel start the service of your server, SQL DB.
 - Navigate to localhost/<folder name of extracted files> (or 127.0.0.1/<folder name of extracted files>) on your browser. You should land on the homepage of the site.
-- To access the admin site, navigate to 127.0.0.1/<folder name of extracted files>/admin.
+- To access the admin site, navigate to 127.0.0.1/<folder name of extracted files>/admin. You need to use the username: admin, password: P@ssw0rd for default login
 
 ## Docker setup (optional)
 Run the executable script file `run-docker.sh` in the repo home with any of the arguments :` start | stop | restart`. For example, the following starts the docker containers and runs the applications. 
