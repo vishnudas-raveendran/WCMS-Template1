@@ -1,8 +1,9 @@
 cd docker
+source $PWD/.env
 choice="${1}" 
 case ${choice} in 
    "start")
-     docker-compose up
+     docker-compose up --build
       ;; 
    "stop") DIR="${2}" 
      docker-compose down -v --remove-orphans
