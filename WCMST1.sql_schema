@@ -153,8 +153,8 @@ CREATE TABLE IF NOT EXISTS `users` (
   UNIQUE KEY `username` (`username`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=10 ;
 
+INSERT INTO `users` (`username`, `password``) VALUES ('admin', MD5('P@ssw0rd'));
 
-INSERT INTO `users` (`id`, `username`, `password`, `last_logged`) VALUES (NULL, 'admin', MD5('P@ssw0rd'), current_timestamp());
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
